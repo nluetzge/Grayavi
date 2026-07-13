@@ -1,5 +1,3 @@
-Gayavi
-======
 ![logo](./logo/grayavi_logo.png?raw=true "Optional Title")
 
 Gayavi is a Python package for creating three-dimensional visualisations of gravitational-wave signals using Mayavi. The package renders spin-weighted spherical harmonic representations of waveforms as volumetric structures and can optionally combine the 3D rendering with the corresponding time-domain waveform to produce animations suitable for scientific visualisation, outreach, and presentations. It supports a range of LISA source classes including Galactic Binaries (GBs), Massive Black Hole Binaries (MBHBs), and Extreme Mass Ratio Inspirals (EMRIs).
