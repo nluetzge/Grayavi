@@ -17,7 +17,6 @@ Features
 Package Structure
 -----------------
 
-::
 
     Gayavi/
     ├── auxfiles/
@@ -47,7 +46,7 @@ Main Components
 ---------------
 
 ``grayavi.py``
-^^^^^^^^^^^^^^
+
 
 Main driver script responsible for:
 
@@ -60,7 +59,7 @@ Main driver script responsible for:
 * Generating MP4 videos using FFmpeg.
 
 ``data_utils.py``
-^^^^^^^^^^^^^^^^^
+
 
 Utility functions for:
 
@@ -71,7 +70,7 @@ Utility functions for:
 * Creation of test waveforms.
 
 ``math_utils.py``
-^^^^^^^^^^^^^^^^^
+
 
 Mathematical helper functions including:
 
@@ -82,7 +81,7 @@ Mathematical helper functions including:
 * Grid generation.
 
 ``render_utils.py``
-^^^^^^^^^^^^^^^^^^^
+
 
 Rendering-related functionality including:
 
@@ -123,7 +122,6 @@ Rendering very large numbers of frames in a single run can cause Mayavi to becom
 
 The parameters
 
-::
 
     start_frame
     end_frame
@@ -134,14 +132,12 @@ For example, a 1000-frame animation can be rendered in two batches:
 
 Batch 1:
 
-::
 
     start_frame: 0
     end_frame: 499
 
 Batch 2:
 
-::
 
     start_frame: 500
     end_frame: 999
@@ -153,7 +149,6 @@ Typical Workflow
 
 1. Select the appropriate configuration file and adjust the required parameters.
 
-::
 
     waveform_filename:
         value: "waveforms/gb_waveform.h5"
@@ -169,7 +164,6 @@ Typical Workflow
 
 2. Run the renderer.
 
-::
 
     python grayavi.py
 
@@ -177,7 +171,6 @@ Typical Workflow
 
 4. Once all frames have been generated, set
 
-::
 
     video_only:
         value: true
@@ -194,7 +187,6 @@ Output Products
 
 Generated products are written to
 
-::
 
     output/
     ├── frames/
@@ -230,7 +222,6 @@ Installation
 
 It is recommended to install the required Python packages in a dedicated virtual environment.
 
-::
 
     pip install numpy scipy matplotlib mayavi opencv-python h5py quaternionic spherical pyyaml
 
