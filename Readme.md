@@ -148,8 +148,7 @@ Typical Workflow
 
 1. Select the appropriate configuration file and adjust the required parameters.
 
-
-
+    ::
     waveform_filename:
         value: "waveforms/gb_waveform.h5"
 
