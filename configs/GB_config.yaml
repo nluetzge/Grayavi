@@ -30,11 +30,11 @@ n_frames:
   flag: false
 
 start_frame:
-  value: 923
+  value: 0
   flag: false
 
 end_frame:
-  value: 1000
+  value: 300
   flag: false
 
 mag:
