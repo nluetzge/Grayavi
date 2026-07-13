@@ -149,6 +149,7 @@ Typical Workflow
 1. Select the appropriate configuration file and adjust the required parameters.
 
     ::
+   
     waveform_filename:
         value: "waveforms/gb_waveform.h5"
 
@@ -161,15 +162,15 @@ Typical Workflow
     end_frame:
         value: 499
 
-2. Run the renderer.
+3. Run the renderer.
 
 
 
     python grayavi.py
 
-3. Continue rendering additional frame batches by updating ``start_frame`` and ``end_frame``.
+4. Continue rendering additional frame batches by updating ``start_frame`` and ``end_frame``.
 
-4. Once all frames have been generated, set
+5. Once all frames have been generated, set
 
 
 
