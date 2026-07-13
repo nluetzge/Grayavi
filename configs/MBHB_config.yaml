@@ -1,0 +1,253 @@
+# config.yaml
+
+waveform_filename:
+  value: "waveforms/mbhb_waveform_q1.h5"
+  flag: false
+
+prefix:
+  value: "MBHB"
+  flag: true
+  short: ""
+  fmt: "{:s}"
+
+cmap_name:
+  value: "turbo"
+  flag: true
+  short: "cmap"
+  fmt: "{:s}"
+
+output_dir:
+  value: "output"
+  flag: false
+
+video_only:
+  value: false
+  flag: false
+
+# Rendering options
+n_frames:
+  value: 1800
+  flag: false
+
+start_frame:
+  value: 200
+  flag: false
+
+end_frame:
+  value: 201
+  flag: false
+
+mag:
+  value: 4
+  flag: false
+
+xdim:
+  value: 1350
+  flag: true
+  short: ""
+  fmt: "{:d}"
+
+ydim:
+  value: 800
+  flag: true
+  short: ""
+  fmt: "{:d}"
+
+framerate:
+  value: 40
+  flag: true
+  short: "fr"
+  fmt: "{:d}"
+
+
+add_waveform:
+  value: true
+  flag: true
+  short: "waveform"
+  fmt: "{:d}"
+
+add_background:
+  value: true
+  flag: true
+  short: "bkg"
+  fmt: "{:d}"
+
+background_file:
+  value: "auxfiles/8k_stars_milky_way.jpg"
+  flag: false
+
+background_color:
+  value: [0, 0, 0]
+  flag: false
+
+plot_bhs:
+  value: true
+  flag: false
+
+bh_color:
+  value: [1, 1, 1]
+  flag: false
+
+# Zoom and camera options
+zoom:
+  value: false
+  flag: true
+  short: "zoom"
+  fmt: "{:d}"
+
+zoom_static:
+  value: 200
+  flag: false
+
+zimin:
+  value: 400
+  flag: false
+
+zimax:
+  value: 700
+  flag: false
+
+z1:
+  value: 300
+  flag: false
+
+z2:
+  value: 60
+  flag: false
+
+# Rotation options
+rotate:
+  value: false
+  flag: true
+  short: "rot"
+  fmt: "{:d}"
+
+angle_static:
+  value: -90
+  flag: false
+
+rimin:
+  value: 0
+  flag: false
+
+rimax:
+  value: 1000
+  flag: false
+
+r1:
+  value: -90
+  flag: false
+
+r2:
+  value: 180
+  flag: false
+
+# Elevation
+elevation:
+  value: 95
+  flag: false
+
+# Shell and waveform rendering parameters
+spinrot:
+  value: "none"
+  flag: true
+  short: "sr"
+  fmt: "{:s}"
+
+n:
+  value: 200
+  flag: true
+  short: "n"
+  fmt: "{:d}"
+
+R:
+  value: 50
+  flag: true
+  short: "R"
+  fmt: "{:d}"
+
+activation_offset:
+  value: 1
+  flag: true
+  short: "ao"
+  fmt: "{:d}"
+
+activation_width:
+  value: 10
+  flag: true
+  short: "aw"
+  fmt: "{:d}"
+
+deactivation_width:
+  value: 20
+  flag: true
+  short: "dw"
+  fmt: "{:d}"
+
+size:
+  value: 50
+  flag: false
+
+radial_scale:
+  value: 1
+  flag: true
+  short: "RS"
+  fmt: "{:g}"
+
+ts:
+  value: 0.1
+  flag: true
+  short: "ts"
+  fmt: "{:.2f}"
+
+rs:
+  value: 1
+  flag: true
+  short: "rs"
+  fmt: "{:.2f}"
+
+n_peaks:
+  value: 10
+  flag: true
+  short: "np"
+  fmt: "{:d}"
+
+cmin:
+  value: 0.01
+  flag: true
+  short: "cmin"
+  fmt: "{:.3f}"
+
+cmax:
+  value: 0.6
+  flag: true
+  short: "cmax"
+  fmt: "{:.3f}"
+
+opmin:
+  value: 0.02
+  flag: true
+  short: "opmin"
+  fmt: "{:.3f}"
+
+opmax:
+  value: 0.8
+  flag: true
+  short: "opmax"
+  fmt: "{:.3f}"
+
+ell_max:
+  value: 2
+  flag: false
+
+spin_weight:
+  value: -2
+  flag: false
+
+l:
+  value: 2
+  flag: false
+
+m:
+  value: 2
+  flag: false
