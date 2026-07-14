@@ -202,7 +202,40 @@ Continue rendering additional frame batches by updating ``start_frame`` and ``en
 Input Data
 ----------
 
-Gayavi expects waveform data stored in HDF5 format (``.h5``). Depending on the source type, files may additionally contain trajectory information that can be used to render orbital motion and spin evolution.
+Gayavi expects all datasets to be located at the root level of the HDF5 file.
+
+A minimal file has the structure:
+
+.. code-block:: text
+
+    /
+    ├── time_vector      (N,)
+    ├── waveform_td      (2, N)
+    ├── traj_x           (N,)
+    ├── traj_y           (N,)
+    └── traj_z           (N,)
+
+For binary systems a second trajectory can be supplied:
+
+.. code-block:: text
+
+    /
+    ├── time_vector      (N,)
+    ├── waveform_td      (2, N)
+    ├── traj_x           (N,)
+    ├── traj_y           (N,)
+    ├── traj_z           (N,)
+    ├── traj_x2          (N,)
+    ├── traj_y2          (N,)
+    └── traj_z2          (N,)
+
+All arrays must contain at least ``n_frames`` samples, as specified in the configuration file.
+
+The ``waveform_td`` dataset contains the real and imaginary parts of the waveform:
+
+* ``waveform_td[0, :]`` = real part
+* ``waveform_td[1, :]`` = imaginary part
+
 
 Output Products
 ---------------
