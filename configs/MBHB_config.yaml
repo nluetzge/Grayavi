@@ -229,12 +229,14 @@ deactivation_width:
   fmt: "{:d}"
 
 # Size parameter used when constructing the swsh grid
-# Might be obsolete since this is the same as R
+# The size for where the fading out (deactivation) happens. Currently same as grid size R
 size:
   value: 50
   flag: false
 
-# Scale factor applied to the radial coordinate for the activation offset
+# This is multiplier on activation_offset that lets you shift the waveform's time-delay
+# (retarded-time) calculation independently of where the field spatially switches on — currently
+# unused
 radial_scale:
   value: 1
   flag: true
@@ -242,6 +244,7 @@ radial_scale:
   fmt: "{:g}"
 
 # Time step scale factor used when reading/interpolating the waveform
+# to tweak your time steps in the vector if needed
 ts:
   value: 0.1
   flag: true
@@ -249,6 +252,7 @@ ts:
   fmt: "{:.2f}"
 
 # Radial scale factor used when reading/interpolating the waveform
+# to tweak your trajectory spatial scale if needed
 rs:
   value: 1
   flag: true
