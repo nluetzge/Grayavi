@@ -1,253 +1,303 @@
 # config.yaml
 
+# Path to the HDF5 file containing the waveform and trajectory data to render
 waveform_filename:
   value: "waveforms/gb_waveform.h5"
   flag: false
 
+# Prefix used when building the output filename for the rendered video
 prefix:
   value: "GB"
   flag: true
   short: ""
   fmt: "{:s}"
 
+# Name of the matplotlib/mayavi colormap used to color the rendered field
 cmap_name:
   value: "turbo"
   flag: true
   short: "cmap"
   fmt: "{:s}"
 
+# Directory where frames, combined frames, and videos will be written
 output_dir:
   value: "output"
   flag: false
 
+# If true, skip frame rendering and only assemble the existing frames into a video
 video_only:
   value: false
   flag: false
 
 # Rendering options
+# Total number of frames in the full waveform/trajectory (used for progress reporting)
 n_frames:
   value: 1000
   flag: false
 
+# Index of the first frame to render in this run
 start_frame:
   value: 0
   flag: false
 
+# Index of the last frame to render in this run
 end_frame:
   value: 300
   flag: false
 
+# Magnification factor applied when saving each frame with mlab.savefig
 mag:
   value: 4
   flag: false
 
+# Width (in pixels) of the rendered frame
 xdim:
   value: 1350
   flag: true
   short: ""
   fmt: "{:d}"
 
+# Height (in pixels) of the rendered frame
 ydim:
   value: 800
   flag: true
   short: ""
   fmt: "{:d}"
 
+# Frames per second used when encoding the output video
 framerate:
   value: 40
   flag: true
   short: "fr"
   fmt: "{:d}"
 
+# If true, render and composite the waveform plot alongside each 3D frame
 add_waveform:
   value: true
   flag: true
   short: "waveform"
   fmt: "{:d}"
 
+# If true, render a background image behind the scene instead of a flat color
 add_background:
   value: true
   flag: true
   short: "bkg"
   fmt: "{:d}"
 
+# Path to the background image file used when add_background is true
 background_file:
   value: "auxfiles/8k_stars_milky_way.jpg"
   flag: false
 
+# RGB color used for the background when add_background is false
 background_color:
   value: [0, 0, 0]
   flag: false
 
+# If true, render the black hole objects in the scene
 plot_bhs:
   value: true
   flag: false
 
+# RGB color used to render the black hole objects
 bh_color:
   value: [1, 1, 1]
   flag: false
 
 
 # Zoom and camera options
+# If true, animate the camera zoom level over the frame range instead of using a static zoom
 zoom:
   value: false
   flag: true
   short: "zoom"
   fmt: "{:d}"
 
+# Fixed camera zoom level used when zoom animation is disabled
 zoom_static:
   value: 200
   flag: false
 
+# Frame index at which the zoom animation begins
 zimin:
   value: 0
   flag: false
 
+# Frame index at which the zoom animation ends
 zimax:
   value: 500
   flag: false
 
+# Starting zoom value at the beginning of the zoom animation range
 z1:
   value: 50
   flag: false
 
+# Ending zoom value at the end of the zoom animation range
 z2:
   value: 200
   flag: false
 
 # Rotation options
+# If true, animate the camera rotation angle over the frame range instead of using a static angle
 rotate:
   value: false
   flag: true
   short: "rot"
   fmt: "{:d}"
 
+# Fixed camera rotation angle used when rotation animation is disabled
 angle_static:
   value: -90
   flag: false
 
+# Frame index at which the rotation animation begins
 rimin:
   value: 0
   flag: false
 
+# Frame index at which the rotation animation ends
 rimax:
   value: 1000
   flag: false
 
+# Starting rotation angle at the beginning of the rotation animation range
 r1:
   value: -90
   flag: false
 
+# Ending rotation angle at the end of the rotation animation range
 r2:
   value: 180
   flag: false
 
 # Elevation
+# Camera elevation angle used when rendering the scene
 elevation:
   value: 95
   flag: false
 
 # Shell and waveform rendering parameters
+# Type of spin-induced rotation applied to the spherical harmonic field: "solid", "diff", or "none"
 spinrot:
   value: "none"
   flag: true
   short: "sr"
   fmt: "{:s}"
 
+# Grid resolution (number of points) used to build the spatial grid
 n:
   value: 200
   flag: true
   short: "n"
   fmt: "{:d}"
 
+# Outer radius of the spatial grid used for rendering
 R:
   value: 50
   flag: true
   short: "R"
   fmt: "{:d}"
 
+# Radial offset at which the swsh activation window begins
 activation_offset:
   value: 10
   flag: true
   short: "ao"
   fmt: "{:d}"
 
+# Width of the radial window over which the swsh field activates (fades in)
 activation_width:
   value: 10
   flag: true
   short: "aw"
   fmt: "{:d}"
 
+# Width of the radial window over which the swsh field deactivates (fades out)
 deactivation_width:
   value: 20
   flag: true
   short: "dw"
   fmt: "{:d}"
 
+# Size parameter used when constructing the swsh grid
 size:
   value: 50
   flag: false
 
+# Scale factor applied to the radial coordinate for the activation offset
 radial_scale:
   value: 1
   flag: true
   short: "RS"
   fmt: "{:g}"
 
+# Time step scale factor used when reading/interpolating the waveform
 ts:
   value: 0.5
   flag: true
   short: "ts"
   fmt: "{:.2f}"
 
+# Radial scale factor used when reading/interpolating the waveform
 rs:
   value: 2
   flag: true
   short: "rs"
   fmt: "{:.2f}"
 
+# Number of waveform peaks used to set up the opacity/color transfer functions
 n_peaks:
   value: 10
   flag: true
   short: "np"
   fmt: "{:d}"
 
+# Fraction of the peak waveform amplitude marking the lower bound of the color transfer function
 cmin:
   value: 0.01
   flag: true
   short: "cmin"
   fmt: "{:.3f}"
 
+# Fraction of the peak waveform amplitude marking the upper bound of the color transfer function
 cmax:
   value: 0.6
   flag: true
   short: "cmax"
   fmt: "{:.3f}"
 
+# Fraction of the peak waveform amplitude marking the lower bound of the opacity transfer function
 opmin:
   value: 0.02
   flag: true
   short: "opmin"
   fmt: "{:.3f}"
 
+# Fraction of the peak waveform amplitude marking the upper bound of the opacity transfer function
 opmax:
   value: 0.6
   flag: true
   short: "opmax"
   fmt: "{:.3f}"
 
+# Maximum spherical harmonic degree (ell) used when building the swsh grid
 ell_max:
   value: 2
   flag: false
 
+# Spin weight of the spin-weighted spherical harmonic used to build the swsh grid
 spin_weight:
   value: -2
   flag: false
 
+# Spherical harmonic degree (l) of the mode being rendered
 l:
   value: 2
   flag: false
 
+# Spherical harmonic order (m) of the mode being rendered
 m:
   value: 2
   flag: false
