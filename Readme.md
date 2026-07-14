@@ -2,6 +2,37 @@
 
 Gayavi is a Python package for creating three-dimensional visualisations of gravitational-wave signals using Mayavi. The package renders spin-weighted spherical harmonic representations of waveforms as volumetric structures and can optionally combine the 3D rendering with the corresponding time-domain waveform to produce animations suitable for scientific visualisation, outreach, and presentations. It supports a range of LISA source classes including Galactic Binaries (GBs), Massive Black Hole Binaries (MBHBs), and Extreme Mass Ratio Inspirals (EMRIs).
 
+Installation
+------------
+
+It is recommended to install the required Python packages in a dedicated virtual environment. 
+This installation is from October 2025. I hope it still works.
+
+
+    conda create -n mayavi python=3.11
+    conda install pyqt=5 qt-main=5.15 mayavi
+    pip install opencv-python
+    conda install pyyaml scipy quaternionic spherical h5py 
+
+FFmpeg must also be installed and accessible from the command line.
+
+Dependencies
+------------
+
+Gayavi relies on the following Python packages:
+
+* NumPy
+* SciPy
+* Matplotlib
+* Mayavi
+* TVTK
+* OpenCV
+* h5py
+* quaternionic
+* spherical
+* PyYAML
+* FFmpeg
+
 Features
 --------
 
@@ -148,8 +179,7 @@ Typical Workflow
 
 1. Select the appropriate configuration file and adjust the required parameters.
 
-    ::
-   
+    
     waveform_filename:
         value: "waveforms/gb_waveform.h5"
 
@@ -163,7 +193,6 @@ Typical Workflow
         value: 499
 
 3. Run the renderer.
-
 
 
     python grayavi.py
@@ -201,33 +230,6 @@ where
 * ``frames_combined`` contains renderings combined with waveform plots.
 * ``videos`` contains the final MP4 animations.
 
-Dependencies
-------------
-
-Gayavi relies on the following Python packages:
-
-* NumPy
-* SciPy
-* Matplotlib
-* Mayavi
-* TVTK
-* OpenCV
-* h5py
-* quaternionic
-* spherical
-* PyYAML
-
-In addition, FFmpeg is required for video generation.
-
-Installation
-------------
-
-It is recommended to install the required Python packages in a dedicated virtual environment.
-
-
-    pip install numpy scipy matplotlib mayavi opencv-python h5py quaternionic spherical pyyaml
-
-FFmpeg must also be installed and accessible from the command line.
 
 Author
 ------
