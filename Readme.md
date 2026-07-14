@@ -199,13 +199,6 @@ Run the renderer.
 
 Continue rendering additional frame batches by updating ``start_frame`` and ``end_frame``.
 
-Once all frames have been generated, set
-
-    video_only:
-        value: true
-
-and run the script again to create the final MP4 file.
-
 Input Data
 ----------
 
