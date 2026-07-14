@@ -1,4 +1,8 @@
 # config.yaml
+# General:
+# flag:   if true then it means this parameter is recorded in the string of the rendered video
+# short:  if flag is true then this is the short description of the parameter
+# fmt:    if flag is true then this is the format of the parameter
 
 # Path to the HDF5 file containing the waveform and trajectory data to render
 waveform_filename:
@@ -30,12 +34,13 @@ video_only:
   flag: false
 
 # Rendering options
-# Total number of frames in the full waveform/trajectory (used for progress reporting)
+# Total number of frames in the full video
 n_frames:
   value: 1000
   flag: false
 
 # Index of the first frame to render in this run
+# Use this to render them in batches of 300-400 frames or code gets too slow
 start_frame:
   value: 0
   flag: false
@@ -45,7 +50,7 @@ end_frame:
   value: 300
   flag: false
 
-# Magnification factor applied when saving each frame with mlab.savefig
+# Magnification factor (resolution) applied when saving each frame with mlab.savefig
 mag:
   value: 4
   flag: false
@@ -186,6 +191,8 @@ spinrot:
   fmt: "{:s}"
 
 # Grid resolution (number of points) used to build the spatial grid
+# This increases the detail in the waveform and gets rid of some fringes but makes the code
+# super slow. 600 was the maximum I did so far
 n:
   value: 200
   flag: true
@@ -221,6 +228,7 @@ deactivation_width:
   fmt: "{:d}"
 
 # Size parameter used when constructing the swsh grid
+# Might be obsolete since this is the same as R
 size:
   value: 50
   flag: false
@@ -267,14 +275,14 @@ cmax:
   short: "cmax"
   fmt: "{:.3f}"
 
-# Fraction of the peak waveform amplitude marking the lower bound of the opacity transfer function
+# Lower bound of the opacity transfer function
 opmin:
   value: 0.02
   flag: true
   short: "opmin"
   fmt: "{:.3f}"
 
-# Fraction of the peak waveform amplitude marking the upper bound of the opacity transfer function
+# Upper bound of the opacity transfer function
 opmax:
   value: 0.8
   flag: true
@@ -292,6 +300,7 @@ spin_weight:
   flag: false
 
 # Spherical harmonic degree (l) of the mode being rendered
+# Changing this would only make sense if your waveforms have higher orders, not tested yet.
 l:
   value: 2
   flag: false
