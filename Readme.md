@@ -177,7 +177,7 @@ After all batches have been rendered, the complete frame set can be combined int
 Typical Workflow
 ----------------
 
-1. Select the appropriate configuration file and adjust the required parameters.
+Select the appropriate configuration file and adjust the required parameters.
 
     
     waveform_filename:
@@ -192,16 +192,14 @@ Typical Workflow
     end_frame:
         value: 499
 
-3. Run the renderer.
+Run the renderer.
 
 
     python grayavi.py
 
-4. Continue rendering additional frame batches by updating ``start_frame`` and ``end_frame``.
+Continue rendering additional frame batches by updating ``start_frame`` and ``end_frame``.
 
-5. Once all frames have been generated, set
-
-
+Once all frames have been generated, set
 
     video_only:
         value: true
