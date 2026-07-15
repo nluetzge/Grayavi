@@ -258,9 +258,9 @@ where
 Author
 ------
 
-Nora Luetzgendorf
+Nora Lützgendorf
 
-Gayavi was developed for the visualisation of gravitational-wave sources and for communicating LISA science through high-quality scientific animations.
+Grayavi was developed based on [gwpv](https://github.com/nilsvu/gwpv) which uses the same techinque but with a different graphical engine ParaView. I found it hard to install ParaView on a Mac so I decided to create a new code using something more native (Mayavi). The credit for the algorithm should go to [Nils Vu](https://github.com/nilsvu) since I would have not managed without looking at his great code. 
 
 
 ![banner](graphics/colormaps.png?raw=true "Optional Title")
