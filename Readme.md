@@ -192,10 +192,10 @@ Select the appropriate configuration file and adjust the required parameters.
     end_frame:
         value: 499
 
-Run the renderer.
+Run the renderer with your desired config file.
 
 
-    python grayavi.py
+    python grayavi.py configs/GB_config.yaml 
 
 Continue rendering additional frame batches by updating ``start_frame`` and ``end_frame``.
 
