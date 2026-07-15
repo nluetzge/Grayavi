@@ -452,7 +452,7 @@ def replicate_on_screen_lights(offscreen_renderer):
             'diffuse_color': (1.0, 1.0, 1.0),
             'specular_color': (1.0, 1.0, 1.0),
             'ambient_color': (0.0, 0.0, 0.0),
-            'intensity': 0.6,
+            'intensity': 1,
             'switch': True,
         },
         {
@@ -462,7 +462,7 @@ def replicate_on_screen_lights(offscreen_renderer):
             'diffuse_color': (1.0, 1.0, 1.0),
             'specular_color': (1.0, 1.0, 1.0),
             'ambient_color': (0.0, 0.0, 0.0),
-            'intensity': 0.5,
+            'intensity': 1,
             'switch': True,
         },
     ]

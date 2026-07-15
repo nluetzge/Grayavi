@@ -10,9 +10,8 @@
 # ===============================================================
 import os
 import subprocess
-import yaml
+import argparse
 import numpy as np
-from scipy.io.wavfile import write
 
 from mayavi import mlab
 
@@ -23,8 +22,19 @@ from data_utils import read_waveform, swsh_grid, Config
 # ===============================================================
 # Main
 # ===============================================================
+# Parse command line arguments
+parser = argparse.ArgumentParser(
+    description="Render gravitational wave visualization frames/video.")
+parser.add_argument(
+    "config",
+    nargs="?",
+    default="configs/GB_config.yaml",
+    help="Path to the config YAML file (default: %(default)s)"
+)
+args = parser.parse_args()
+
 # Load configuration
-config = Config("configs/GB_config.yaml")
+config = Config(args.config)
 
 # Check if output directory exists
 os.makedirs(config["output_dir"], exist_ok=True)
